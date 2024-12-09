@@ -66,7 +66,9 @@ def do_n(n):
                                 if xy[0] != xy[1]:
                                     if xy[0] != rexy[1] and xy[1] != rexy[0]:
                                         if xy[0] != xy[1] and xy[0] != rexy[0]:
-                                            out.append(str(xy[0])+ls[i]+str(xy[1])+"="+str(operat4(xy,i))+"="+str(rexy[0])+ls[i]+str(rexy[1]))
+                                            if xy[0] <= xy[1]:
+                                                if xy[0] < rexy[1]:
+                                                    out.append(str(xy[0])+ls[i]+str(xy[1])+"="+str(operat4(xy,i))+"="+str(rexy[0])+ls[i]+str(rexy[1]))
     return out
 
 for i in range(10000000):
